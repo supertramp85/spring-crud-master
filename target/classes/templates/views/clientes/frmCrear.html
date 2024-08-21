@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="plantilla/template :: head">
+</head>
+<body>
+	<header th:replace="plantilla/template :: header"></header>
+
+	<div class="container">
+	
+	<div class="card bg-light">
+		<div class="card-header bg-dark text-white" th:text="${titulo}"></div>
+		<div class="card-body">
+	
+		    <!-- TITULO -->
+		<form th:action="@{/views/clientes/save}" th:object="${cliente}" method="post">
+			<div class="form-group row">
+				<input type="hidden" th:field="*{id}">
+				<label class="col-md-2" for="titulo">Titulo:</label> 
+				<input type="text" th:field="*{titulo}" class="form-control form-control-sm col-md-6" id="titulo"
+					placeholder="titulo"> 
+					<small class="form-text text-danger" th:if="${#fields.hasErrors('titulo')}"
+						th:errors="*{titulo}">
+					</small>
+			</div>
+			<!-- DESCRIPCION -->
+			<div class="form-group row">
+				<label class="col-md-2" for="descripcion">Descripcion</label> 
+				<input type="text" th:field="*{descripcion}" class="form-control form-control-sm col-md-6" id="descripcion"
+					placeholder="descripcion"> 
+					<small class="form-text text-danger" th:if="${#fields.hasErrors('descripcion')}"
+						th:errors="*{descripcion}">
+					</small>
+			</div>
+		<!-- LINK -->
+			<div class="form-group row">
+				<label class="col-md-2" for="link">Link</label> 
+				<input type="text" th:field="*{link}" class="form-control form-control-sm col-md-6" id="link"
+					placeholder="link"> 
+					<small class="form-text text-danger" th:if="${#fields.hasErrors('link')}"
+						th:errors="*{link}">
+					</small>
+			</div>
+	    <!--PREGUNTA  -->
+			<div class="form-group row">
+				<label class="col-md-2" for="pregunta">pregunta en Vivo</label> 
+				<input type="text" th:field="*{pregunta}" class="form-control form-control-sm col-md-6" id="pregunta"
+					placeholder="pregunta"> 
+					<small class="form-text text-danger" th:if="${#fields.hasErrors('pregunta')}"
+						th:errors="*{pregunta}">
+					</small>
+			</div>
+	   	
+	   <!--FECHA_PUBL  -->
+			<div class="form-group row">
+			<label class="col-md-2" for="fecha_publicacion">Fecha de Publicacion</label> 
+				<input type="datetime-local" th:field="*{fecha_publicacion}" pattern="yyyy-MM-dd" class="form-control form-control-sm col-md-6" id="fecha_publicacion"
+					placeholder="fecha_publicacion"> 
+					<small class="form-text text-danger" th:if="${#fields.hasErrors('fecha_publicacion')}"
+						th:errors="*{fecha_publicacion}">
+					</small>
+			</div> 
+	   <!--FECHA_VENC  -->
+			<div class="form-group row">
+				<label class="col-md-2" for="fecha_vencimiento">Fecha de Vencimiento</label> 
+				<input type="datetime-local" th:field="*{fecha_vencimiento}" pattern="yyyy-MM-dd" class="form-control form-control-sm col-md-6" id="fecha_vencimiento"
+					placeholder="fecha_vencimiento"> 
+					<small class="form-text text-danger" th:if="${#fields.hasErrors('fecha_vencimiento')}"
+						th:errors="*{fecha_vencimiento}">
+					</small>
+			</div>		
+			
+				
+			
+		<!--AREA-->	
+		<div class="form-group row">
+				<label class="col-md-2" for="ciudad">Area</label> 
+				<select th:field="*{ciudad}" class="form-control form-control-sm col-md-6" id="ciudad"> 
+					<option th:each="ciudad:${ciudades}"
+						th:value="${ciudad.id}"
+						th:text="${ciudad.ciudad}"		
+					/>					
+				</select>
+			</div>
+	
+
+			
+			<div class="card-footer bg-dark">
+				<input type="submit" class="btn btn-primary btn-sm" value="Guardar">
+			</div>
+			
+		</form>
+		</div>
+	</div>
+
+	</div>
+
+	<footer th:replace="plantilla/template :: footer"></footer>
+
+</body>
+</html>

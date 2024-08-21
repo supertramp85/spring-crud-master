@@ -1,0 +1,11 @@
+C:\datos\springboot-crud-master\src\main\java\com\springboot\clienteapp\controller\HomeController.java
+C:\datos\springboot-crud-master\src\main\java\com\springboot\clienteapp\models\entity\Cliente.java
+C:\datos\springboot-crud-master\src\main\java\com\springboot\clienteapp\models\service\CiudadServiceImpl.java
+C:\datos\springboot-crud-master\src\main\java\com\springboot\clienteapp\controller\ClienteController.java
+C:\datos\springboot-crud-master\src\main\java\com\springboot\clienteapp\models\service\ICiudadService.java
+C:\datos\springboot-crud-master\src\main\java\com\springboot\clienteapp\models\service\IClienteService.java
+C:\datos\springboot-crud-master\src\main\java\com\springboot\clienteapp\models\service\ClienteServiceImpl.java
+C:\datos\springboot-crud-master\src\main\java\com\springboot\clienteapp\models\repository\ClienteRepository.java
+C:\datos\springboot-crud-master\src\main\java\com\springboot\clienteapp\models\entity\Ciudad.java
+C:\datos\springboot-crud-master\src\main\java\com\springboot\clienteapp\SpringbootClienteappApplication.java
+C:\datos\springboot-crud-master\src\main\java\com\springboot\clienteapp\models\repository\CiudadRespository.java
